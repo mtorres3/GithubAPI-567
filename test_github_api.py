@@ -1,6 +1,4 @@
 import unittest
-import requests
-import json
 from github_api import repo_amount
 
 class TestGithubApi(unittest.TestCase):
