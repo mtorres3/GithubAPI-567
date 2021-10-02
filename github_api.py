@@ -9,7 +9,7 @@ def repo_amount(user):
         for repo in repoInfo:
             counter = 0
             print("Repo Name: " + repo['name'])
-            commitUrl = "https://api.github.com/repos/" + user + "/" + repo['name'] + "/commits"
+            commitUrl = "https://api.github.com/repos/" + user + "/" + repo['name'] + "/commits?page=1&per_page=100"
             commitInfo = requests.get(commitUrl).json()
             for commit in commitInfo:
                 counter += 1
@@ -19,4 +19,4 @@ def repo_amount(user):
         return "Invalid user data"
 
 
-#repo_amount(4)
+#repo_amount('mtorres3')
